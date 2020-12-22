@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+body{
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    max-width: 1000px;
+}
+
+/* ヘッダー */
+header {
+    padding: 10px 0;
+}
+
+/* ナビゲーション */
+nav{
+    text-align: center;
+    padding: 20px 0;
+    }
+nav ul{
+    margin: 0 ;
+    padding: 0 ;
+    }
+nav li{
+    list-style: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 20%;
+    }
+
+
+ul li a{
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
+ul li.current{
+    background-color: #DEEBF7;
+}
+ul li.current a{
+    color: #444;
+    }
+ul li:hover{
+    background-color: #FFF2CC;
+    }
+.icon {
+    height:30px;
+    
+}
+/* 本文 */
+
+.wrapper {
+    border: solid 2px;
+    margin: 0 10px;
+    padding-bottom:1000px;
+}
+
+.contents{
+    margin: 0 10px;
+    border:solid 1px;
+}
+
+
+/* ボックス */
+.box {
+    padding: 0.5em 1em;
+    margin: 2em 1em;
+    border: double 5px #8dcfeb;
+    border-radius: 10px;
+}
+.box p {
+    margin: 0; 
+    padding: 0;
+}
+/* 見出し */
+h1 {
+    position: relative;
+    padding: 0.6em;
+    background: #8dcfeb;
+    border-radius: 10px;
+    color: #fff;
+
+  }
+  
+  h1:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 30px;
+    border: 15px solid transparent;
+    border-top: 15px solid #8dcfeb;
+    width: 0;
+    height: 0;
+  }
+  
+
+/* 広告 */
+.ad-top {
+    padding: 0.5em 1em;
+    margin: 0 auto;
+    position: -webkit-sticky;
+    background: url(hari.png);
+    background-size: contain;
+    height: 120px;
+    width: 240px;
+    position: sticky;
+    top: 0px;
+}
+
+.ad-bottom {
+    padding: 0.5em 1em;
+    position: -webkit-sticky;
+    background: url(panda.png);
+    background-size: contain;
+    height: 120px;
+    position: sticky;
+    top: 650px;
+
+}
+
+.ad-right {
+    padding: 0 0;
+    position: -webkit-sticky;
+    position: fixed;
+    top: 20vh;
+    right: 0;
+    width: 120px;
+    height: 50vh;
+    background: url("koara.png");
+    background-size: contain;
+    animation: fadein 7s;
+}
+
+.ad-left {
+    padding: 0 0;
+    position: -webkit-sticky;
+    position: fixed;
+    top: 20vh;
+    left: 0;
+    width: 120px;
+    height: 50vh;
+    background: url("koara.png");
+    background-size: contain;
+    animation: fadein;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 6s;
+    animation-duration: 1s;
+}
+
+.popup {
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70vw;
+    height: 55vh;
+    overflow-y: scroll;
+}
+/* チェックリストを非表示 */
+#popup-close{
+    display: none;
+  }
+
+/* popup-closeチェックが押されたときに.popupに追記*/
+#popup-close:checked + .popup{
+    display: none;
+  }
+
+.popup-content{
+    margin: 40px auto 40px auto;
+    
+  }
+
+.icon-close {
+    background: #000000;
+    color: #fff;
+    font-size:10px;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+/*スマホ */
+@media (max-width: 481px){
+    nav li{font-size: 13px;}
+}
+
+/*タブレット */
+ @media (max-width: 1024px){
+    .contents {width: 98%;}
+    .map {width:80%;}
+    .logo {width: 60%;}
+    nav li{font-size: 16px;}
+    .icon {height: 25px;}
+} 
